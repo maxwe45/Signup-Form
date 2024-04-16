@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'cinzelBold';
-    src: url('cinzeldecorative-bold-webfont.woff2') format('woff2'),
-         url('cinzeldecorative-bold-webfont.woff') format('woff');
+    src: url('../fonts/cinzeldecorative-bold-webfont.woff2') format('woff2'),
+         url('../fonts/cinzeldecorative-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'cinzelReg';
-    src: url('cinzeldecorative-regular-webfont.woff2') format('woff2'),
-         url('cinzeldecorative-regular-webfont.woff') format('woff');
+    src: url('../fonts/cinzeldecorative-regular-webfont.woff2') format('woff2'),
+         url('../fonts/cinzeldecorative-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -67,7 +67,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 3em;
+    padding-left: 3em;
 }
 
 .inputs {
@@ -77,6 +77,22 @@ p {
     gap: 2em;
     padding-left: 0px;
     width: 50%;
+    border: none;
+}
+
+input:focus {
+    box-shadow: 2px 3px 5px #0000004F;
+    outline :blue solid 0.5px;
+}
+
+input {
+    border-radius: 3px;
+    border: 1px solid #cfc5c5;
+    height: 22px;
+}
+
+input:invalid {
+    outline: red solid 0.5px;
 }
 
 li {
@@ -95,13 +111,17 @@ li {
 
 .caption {
     font-size: 15pt;
+    font-family: 'cinzelBold';
 }
 
 .formBottom {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    margin-top:30px;
+    padding-top: 20px;
+    box-shadow: 10px -2px 7px #1c1b1b3f;
 }
 
 .divAndFooter {
@@ -129,16 +149,14 @@ li {
 a {
     color:#486178;
     text-decoration: none;
-
+    font-family: 'cinzelReg';
 }
 
 label {
     font-size: 8pt;
     font-weight: 600;
     color: #486178;
+    font-family: 'cinzelReg';
 }
 
-li:focus {
-    border-color: blue;
-    box-shadow: black 50px,10px;
-}
+
